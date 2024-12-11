@@ -1,3 +1,7 @@
+//高级一点的冒泡程序，可以自动
+//语法：void* malloc(size_t size);
+//malloc 是 C 标准库中的一个函数，用于在堆（heap）上分配一块指定大小的连续内存空间
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,12 +16,12 @@ int main()
 	while (1)
 	{
 		printf("请输入要输入的整数个数（大于1）： ");
-		if (scanf_s("%d", &N) != 1)
+		if (scanf("%d", &N) != 1)//这里是复合了语句，如果输入成功scanf是会返回值为1的
 		{
 			printf("输入无效，请输入一个整数。\n");
 			// 清除输入缓冲区
-			while (getchar() != '\n');
-			continue;
+			while (getchar() != '\n');//万金油
+			continue;//结束这次循环
 		}
 		if (N > 1)
 		{
@@ -27,7 +31,16 @@ int main()
 	}
 
 	// 动态分配数组
+
 	int* numbers = (int*)malloc(N * sizeof(int));
+	
+	//这里就是分配内存了
+	//为numbers数组分配了N个位置储存数据
+	//N * sizeof(int) 作用：计算需要分配的总字节数
+	//解释：如果你需要存储 N 个整数，那么总共需要 N 乘以每个整数所占的字节数
+	//int* numbers 作用：声明一个指向整数的指针 numbers，用于存储 malloc 分配的内存地址
+	//这样，numbers 就可以像普通数组一样，通过指针操作来访问和操作这块内存
+	
 	if (numbers == NULL)
 	{
 		printf("内存分配失败。\n");
