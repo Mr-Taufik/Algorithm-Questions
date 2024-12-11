@@ -13,11 +13,13 @@ sqrt 函数返回的是一个浮点数（double），而这里的代码需要整
 #include <stdio.h>
 #include <math.h>
 
-int isPrime(int num) {
+int isPrime(int num) 
+{
 	if (num < 2)
-		return 0; // 0 和 1 不是素数
+                    return 0;	 // 0 和 1 不是素数
 	int max_divisor = (int)sqrt((double)num);
-	for (int i = 2; i <= max_divisor; i++) {
+	for (int i = 2; i <= max_divisor; i++) 
+	{
 		if (num % i == 0)
 			return 0; // 找到因子，非素数
 	}
