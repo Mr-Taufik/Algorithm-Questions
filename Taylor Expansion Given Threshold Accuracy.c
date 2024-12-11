@@ -22,14 +22,17 @@ int main() {
 	double threshold = 0.00001;
 
 	// 输入部分
-	while (1) {
+	while (1) 
+	{
 		printf("请输入一个正实数x: ");
-		if (scanf_s("%lf", &x) != 1) {
+		if (scanf_s("%lf", &x) != 1) 
+		{
 			printf("输入无效，请输入一个数字。\n");
 			while (getchar() != '\n'); // 清除输入缓冲区
 			continue;
 		}
-		if (x <= 0) {
+		if (x <= 0) 
+		{
 			printf("x必须是一个正实数，请重新输入。\n");
 			continue;
 		}
@@ -47,14 +50,17 @@ int main() {
 }
 
 // 计算级数的函数
-double calculateSeries(double x, double threshold, int* termCount) {
+double calculateSeries(double x, double threshold, int* termCount) 
+{
 	double sum = 1.0;       // 累加和，初始为1（对应x^0 / 0!）
 	double term = 1.0;      // 当前项的值，初始为1（对应x^0 / 0!）
 	int n = 1;              // 当前项的指数
 
-	while (1) {
+	while (1) 
+	{
 		term *= x / n;      // 计算下一项：term = term * x / n
-		if (fabs(term) < threshold) {
+		if (fabs(term) < threshold) 
+		{
 			break;
 		}
 		sum += term;
