@@ -15,9 +15,11 @@ int main()
 	int N;
 	double sum = 0.0;
 
-	while (1) {
+	while (1) 
+	{
 		printf("请输入一个大于1的整数N： ");
-		if (scanf_s("%d", &N) != 1) {
+		if (scanf_s("%d", &N) != 1) 
+		{
 			// 如果输入不是整数，清除输入缓冲区
 			printf("输入无效，请输入一个整数。\n");
 			while (getchar() != '\n'); // 清除缓冲区
