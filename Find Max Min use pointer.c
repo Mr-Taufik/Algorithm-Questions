@@ -16,7 +16,8 @@ int main()
     // 输入10个数字
     for (int i = 0; i < 10; i++)
     {
-        if (scanf_s("%d", &arr[i]) != 1) {
+        if (scanf_s("%d", &arr[i]) != 1) 
+        {
             printf("输入错误。\n");
             return 1;
         }
@@ -59,7 +60,8 @@ void findMaxMin(int arr[], int size, int* max, int* min)
 // 函数声明：查找最大值和最小值
 void findMaxMin(int arr[], int size, int* max, int* min);
 
-int main() {
+int main() 
+{
     int numbers[] = { 23, 45, 12, 67, 34, 89, 2, 78 };
     int size = sizeof(numbers) / sizeof(numbers[0]);
     int maximum, minimum;
@@ -71,7 +73,8 @@ int main() {
     return 0;
 }
 
-void findMaxMin(int arr[], int size, int* max, int* min) {
+void findMaxMin(int arr[], int size, int* max, int* min) 
+{
     if (size <= 0) {
         *max = *min = 0;
         return;
@@ -79,11 +82,14 @@ void findMaxMin(int arr[], int size, int* max, int* min) {
 
     *max = *min = arr[0];
 
-    for (int i = 1; i < size; i++) {
-        if (arr[i] > *max) {
+    for (int i = 1; i < size; i++) 
+    {
+        if (arr[i] > *max) 
+        {
             *max = arr[i];
         }
-        if (arr[i] < *min) {
+        if (arr[i] < *min) 
+        {
             *min = arr[i];
         }
     }
