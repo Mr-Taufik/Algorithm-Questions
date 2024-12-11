@@ -1,5 +1,14 @@
-代码计算任意输入两个数，他们中间数的平方和
-还有他们的倒数和
+//代码计算任意输入两个数，他们中间数的平方和
+//还有他们的倒数和
+//如果你写 0.0，它的类型默认是 double。
+//如果你写 0.0f，它的类型就是 float
+//float sum = 0.0;   // 0.0 是 double 类型
+//sum += 0.5;        // double 类型的 0.5 会被隐式转换为 float
+//float sum = 0.0f;  // 明确为 float 类型
+//sum += 0.5f;       // 避免隐式类型转换
+
+
+
 
 #include <stdio.h>
 
@@ -13,14 +22,16 @@ int main()
 
     // 输入第一个数
     printf("Enter the first number: ");
-    if (scanf_s("%d", &a) != 1) {///这里的写法是如果scanf输入是失败的就不会返回1， scanf输入成功的返回值是1
+    if (scanf_s("%d", &a) != 1) 
+    {///这里的写法是如果scanf输入是失败的就不会返回1， scanf输入成功的返回值是1
         printf("Invalid input. Please enter an integer.\n");
         return 1;
     }
 
     // 输入第二个数
     printf("Enter the second number: ");
-    if (scanf_s("%d", &b) != 1) {
+    if (scanf_s("%d", &b) != 1) 
+    {
         printf("Invalid input. Please enter an integer.\n");
         return 1;
     }
@@ -38,7 +49,8 @@ int main()
     }
 
     // 检查是否有有效的范围
-    if (lower <= 0) {
+    if (lower <= 0) 
+    {
         printf("The range must consist of positive integers to calculate reciprocals.\n");
         return 1;
     }
