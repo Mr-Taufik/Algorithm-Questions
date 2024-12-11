@@ -13,8 +13,10 @@ int main() {
 	printf("请输入要查找的数字： ");
 	scanf_s("%d", &target);
 
-	while (index < size) { // 循环遍历数组
-		if (array[index] == target) {
+	while (index < size) 
+	{ // 循环遍历数组
+		if (array[index] == target) 
+		{
 			printf("数字 %d 在数组中的位置是 %d（索引从0开始）。\n", target, index);
 			found = 1;
 			break; // 找到后退出循环
@@ -22,7 +24,8 @@ int main() {
 		index++;
 	}
 
-	if (!found) {
+	if (!found) 
+	{
 		printf("数字 %d 不在数组中。\n", target);
 	}
 
