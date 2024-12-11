@@ -33,7 +33,7 @@ int main()
 
     int isPrime = 1; // 假设是素数
     int limit = (int)sqrt((double)number);
-   //这里的limit就是素数的一种计算方法，开平方
+   //这里的limit就是素数的一种计算方法，开平方，sqrt函数是接受double和返回double的，所以需要强转类型
     for (int i = 2; i <= limit; i++)
     {
         if (number % i == 0)
