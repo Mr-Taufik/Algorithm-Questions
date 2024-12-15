@@ -1,0 +1,45 @@
+//分类统计字符个数，输入一行字符，统计出里面的英文字幕和数字字母，空格和其他字符个数
+#include <stdio.h>
+#include <ctype.h> // 提供 isalpha, isdigit 函数
+
+int main()
+{
+    char input[1000]; // 存储用户输入的字符串
+    int letters = 0;  // 英文字母个数
+    int digits = 0;   // 数字字符个数
+    int spaces = 0;   // 空格个数
+    int others = 0;   // 其他字符个数
+
+    // 提示用户输入
+    printf("请输入一行字符：\n");
+    fgets(input, sizeof(input), stdin); // 获取用户输入，包括空格
+
+    // 遍历每个字符
+    for (int i = 0; input[i] != '\0'; i++) 
+    {
+        if (isalpha(input[i])) 
+        {        // 判断是否是英文字母
+            letters++;
+        } 
+        else if (isdigit(input[i])) 
+        { // 判断是否是数字字符
+            digits++;
+        }
+        else if (isspace(input[i]))
+        { // 判断是否是空格
+            spaces++;
+        } 
+        else 
+        {                        // 其他字符
+            others++;
+        }
+    }
+
+    // 输出统计结果
+    printf("英文字母个数：%d\n", letters);
+    printf("数字字符个数：%d\n", digits);
+    printf("空格个数：%d\n", spaces);
+    printf("其他字符个数：%d\n", others);
+
+    return 0;
+}
