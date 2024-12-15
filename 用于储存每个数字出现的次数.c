@@ -1,3 +1,7 @@
+这个程序里面的循环挺好的，结构很有意思
+
+
+
 #include <stdio.h>
 
 int main()
