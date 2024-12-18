@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <ctype.h>  // 引入 isalpha 和 isdigit 函数
+
+int main() {
+    char str[1000];  // 存储输入的字符
+    int letter_count = 0;  // 英文字母计数
+    int digit_count = 0;   // 数字计数
+    int other_count = 0;   // 其他字符计数
+
+    printf("请输入一行字符: ");
+    fgets(str, sizeof(str), stdin);  // 使用 fgets 来读取一行输入
+
+    // 遍历输入的每个字符
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (isalpha(str[i])) {
+            letter_count++;  // 如果是字母
+        } else if (isdigit(str[i])) {
+            digit_count++;   // 如果是数字
+        } else if (!isspace(str[i])) {  // 不是空格的话就是其他字符
+            other_count++;
+        }
+    }
+
+    // 输出统计结果
+    printf("英文字母个数: %d\n", letter_count);
+    printf("数字个数: %d\n", digit_count);
+    printf("其他字符个数: %d\n", other_count);
+
+    return 0;
+}
