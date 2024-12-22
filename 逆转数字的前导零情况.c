@@ -9,7 +9,7 @@ int main()
 	int array[MAX] = { 0 };
 	int number;
 	int time = 0;
-	printf("ÊäÈëÊı×Ö£¬Õâ¸öÊı×Ö²»Òª³¬¹ıÊ®Î»Êı£º");
+	printf("è¾“å…¥æ•°å­—ï¼Œè¿™ä¸ªæ•°å­—ä¸è¦è¶…è¿‡åä½æ•°ï¼š");
 	scanf_s("%d", &number);
 
 	int arrayNumber = number;
